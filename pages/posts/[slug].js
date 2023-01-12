@@ -14,6 +14,7 @@ import { CMS_NAME } from '@/lib/constants'
 import markdownToHtml from '@/lib/markdownToHtml'
 
 export default function Post({ post, morePosts, preview }) {
+  console.log(post);
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -21,7 +22,6 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -29,7 +29,7 @@ export default function Post({ post, morePosts, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
+                  {post.title}
                 </title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
@@ -38,6 +38,8 @@ export default function Post({ post, morePosts, preview }) {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                reviewer={post.reviewer}
+                excerpt={post.excerpt}
               />
               <PostBody content={post.content} />
             </article>

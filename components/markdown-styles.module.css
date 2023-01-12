@@ -1,10 +1,16 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-xl leading-9 font-Lota text-[#2d3246] font-light;
 }
 
 .markdown p,
-.markdown ul,
-.markdown ol,
+.markdown ul {
+  list-style: revert;
+  padding-inline-start: 40px;
+}
+.markdown ol {
+  list-style: revert;
+  padding-inline-start: 40px;
+}
 .markdown blockquote {
   @apply my-6;
 }

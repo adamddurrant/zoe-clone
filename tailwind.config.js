@@ -12,6 +12,7 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+        text:'#2d3246',
       },
       spacing: {
         28: '7rem',
@@ -27,6 +28,10 @@ module.exports = {
         '6xl': '2.75rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',
+      },
+      fontFamily: {
+        Nantes: ["Nantes"],
+        Lota: ["Lota"],
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
