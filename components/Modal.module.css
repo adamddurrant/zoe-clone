@@ -1,0 +1,89 @@
+/* @src/components/Modal.module.css */
+
+.position {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin-top: -37px;
+}
+
+.modal:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  z-index: 3;
+  top: -2%;
+  transform: rotate(45deg);
+  border-color: #d3d3d3;
+}
+
+.modal {
+  width: 300px;
+  height: auto;
+  background: white;
+  color: white;
+  z-index: 10;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  border: 1px solid #d3d3d3;
+  padding: 1rem;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
+}
+
+.modalHeader {
+  margin-top: 5px;
+  height: 50px;
+  background: white;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modalContent {
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.modalActions {
+  position: absolute;
+  bottom: 2px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.actionsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  color: #2c3e50;
+  background: transparent;
+  transition: all 0.25s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-self: flex-end;
+}

@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  #article-body ul {
+    list-style: revert;
+    padding-inline-start: 40px;
+  }
+  #article-body ol {
+    list-style: revert;
+    padding-inline-start: 40px;
+  }
   blockquote {
     background: #f9f9f9;
     border-left: 10px solid #ccc;
@@ -22,37 +30,45 @@
     display: inline;
   }
 
-  a {
-    color: #445dc3; 
+  #article-body a {
+    color: #445dc3;
   }
 
   .post-pic img {
     object-fit: cover;
   }
-nav {
-  grid-template-columns: 1fr 3fr auto 3fr 1fr;
-}
-  nav ul {
-    display:flex;
+  nav {
+    grid-template-columns: 1fr 3fr auto 3fr 1fr;
   }
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+}
+
+time {
+  font-size: 0.875rem;
+}
+
+[data-testid*="flowbite-tooltip"] ul {
+  display: block;
 }
 
 body {
-  font-family:'Lota';
-  font-size: 20px!important;
-  line-height: 34px!important;
+  font-family: "Lota";
+  font-size: 20px !important;
+  line-height: 34px !important;
   color: rgb(45, 50, 70);
 }
 
-  @font-face {
-    font-family: "Nantes";
-    src: url("../assets/fonts/Nantes/Nantes Light.ttf");
-    font-style: normal;
-  }
+@font-face {
+  font-family: "Nantes";
+  src: url("/assets/fonts/Nantes/Nantes\ Light.ttf");
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: "Lota";
-    src: url("../assets/fonts/lota-grotesque/Los Andes  Lota Grotesque Alt 1 Light.otf"); 
-    font-style: normal;
-  }
-
+@font-face {
+  font-family: "Lota";
+  src: url("/assets/fonts/lota-grotesque/Los Andes  Lota Grotesque Alt 1 Light.otf");
+  font-style: normal;
+}

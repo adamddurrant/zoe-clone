@@ -1,42 +1,47 @@
-import Container from './container'
-import cn from 'classnames'
-import { EXAMPLE_PATH } from '@/lib/constants'
+import Container from "./container";
+import cn from "classnames";
+import { AiOutlineBell } from "react-icons/ai";
 
 export default function Alert({ preview }) {
   return (
     <div
-      className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
+      className={cn("border-b", {
+        "bg-accent-7 border-accent-7 text-white": preview,
+        "bg-[#fac928] border-accent-2": !preview,
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className='py-2 text-center text-sm'>
           {preview ? (
             <>
-              This is page is a preview.{' '}
+              This is page is a preview.{" "}
               <a
-                href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                href='/api/exit-preview'
+                className='underline hover:text-cyan duration-200 transition-colors'
               >
                 Click here
-              </a>{' '}
+              </a>{" "}
               to exit preview mode.
             </>
           ) : (
             <>
-              The source code for this blog is{' '}
-              <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-success duration-200 transition-colors"
-              >
-                available on GitHub
-              </a>
-              .
+              <div className='flex justify-center items-center'>
+                <AiOutlineBell className='mr-1' />{" "}
+                <span>
+                  Watch ZOE's Tim Spector on Diary of a CEO{" "}
+                  <a
+                    href={`https://www.youtube.com/watch?v=66hWntvp0_4`}
+                    className='underline hover:text-success duration-200 transition-colors'
+                  >
+                    available now on Youtube
+                  </a>
+                  .
+                </span>
+              </div>
             </>
           )}
         </div>
       </Container>
     </div>
-  )
+  );
 }

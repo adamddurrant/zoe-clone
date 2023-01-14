@@ -3,14 +3,8 @@
 }
 
 .markdown p,
-.markdown ul {
-  list-style: revert;
-  padding-inline-start: 40px;
-}
-.markdown ol {
-  list-style: revert;
-  padding-inline-start: 40px;
-}
+.markdown ul,
+.markdown ol,
 .markdown blockquote {
   @apply my-6;
 }
