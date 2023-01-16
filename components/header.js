@@ -38,22 +38,6 @@ export default function Header() {
             <Dropdown
               id='dropdown'
               inline
-              label='Nutrition'
-              className='w-[50%]'
-            >
-              <Dropdown.Item>Food Facts</Dropdown.Item>
-              <Dropdown.Item>Diets</Dropdown.Item>
-              <Dropdown.Item>Recipes</Dropdown.Item>
-              <Dropdown.Item>Blood Sugar</Dropdown.Item>
-              <Dropdown.Item>Blood Fat</Dropdown.Item>
-            </Dropdown>
-          </div>
-        </Navbar.Link>
-        <Navbar.Link href='#'>
-          <div className='flex md:order-2'>
-            <Dropdown
-              id='dropdown'
-              inline
               label='Gut Health'
               className='w-[50%]'
             >

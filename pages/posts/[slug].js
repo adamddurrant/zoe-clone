@@ -41,6 +41,7 @@ export default function Post({ post, morePosts, preview }) {
                 bio={post.bio}
                 twitter={post.twitter}
                 linkedin={post.linkedin}
+                personal={post}
               />
               <PostBody content={post.content} />
             </article>

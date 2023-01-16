@@ -5,7 +5,7 @@ import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
 import SectionSeparator from "./section-separator";
 
-export default function Modal({
+export default function BylineModal({
   setIsOpen,
   linkedin,
   twitter,
