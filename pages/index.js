@@ -28,10 +28,8 @@ export default function Index({ allPosts }) {
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
           />
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-
           <TheTeam />
-          <LatestPodcasts />
+          {LatestPodcasts.length > 0 && <LatestPodcasts posts={morePosts} />}
         </Container>
       </Layout>
     </>

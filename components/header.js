@@ -17,7 +17,7 @@ export default function Header() {
     <NavbarNoPadding
       fluid={true}
       rounded={true}
-      className='mx-auto py-12 max-w-screen-2xl '
+      className='mx-auto py-12 max-w-screen-2xl'
     >
       <Navbar.Brand href='/'>
         <img

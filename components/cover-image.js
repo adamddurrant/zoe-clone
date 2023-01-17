@@ -1,23 +1,22 @@
-import { Image } from 'react-datocms'
-import cn from 'classnames'
-import Link from 'next/link'
+import { Image } from "react-datocms";
+import cn from "classnames";
+import Link from "next/link";
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
     <Image
-    layout={"fill"} 
+      layout={"fill"}
       data={{
         ...responsiveImage,
         alt: `Cover Image for ${title}`,
-        
       }}
-      className={cn('post-pic shadow-small w-full h-full', {
-        'hover:shadow-medium transition-shadow duration-200': slug,
+      className={cn("post-pic w-full h-full", {
+        "hover:shadow-medium transition-shadow duration-200": slug,
       })}
     />
-  )
+  );
   return (
-    <div className="sm:mx-0 w-full h-full relative">
+    <div className='sm:mx-0 w-full h-full relative'>
       {slug ? (
         <Link href={`/posts/${slug}`} aria-label={title}>
           {image}
@@ -26,5 +25,5 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         image
       )}
     </div>
-  )
+  );
 }
