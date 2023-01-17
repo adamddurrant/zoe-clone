@@ -46,6 +46,38 @@
   }
 }
 
+.ul-grid {
+  grid-gap: 1.5rem;
+  display: grid;
+  justify-content: space-between;
+}
+
+.spotlight {
+  grid-gap: 1.5rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 35fr 65fr;
+}
+
+.top-grid {
+  grid-gap: 1.5rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 72fr 28fr;
+  vertical-align: baseline;
+}
+
+.slot-1-grid {
+  grid-gap: 1.5rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 35fr 65fr;
+  display: grid;
+}
+
+.team-person {
+  padding-bottom: 30px;
+}
+
 time {
   font-size: 0.875rem;
 }
@@ -64,6 +96,12 @@ body {
 @font-face {
   font-family: "Nantes";
   src: url("/assets/fonts/Nantes/Nantes\ Light.ttf");
+  font-style: light;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: url("/assets/fonts/Nantes/Nantes Regular.ttf");
   font-style: normal;
 }
 
@@ -71,4 +109,18 @@ body {
   font-family: "Lota";
   src: url("/assets/fonts/lota-grotesque/Los Andes  Lota Grotesque Alt 1 Light.otf");
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Lota";
+  src: url("/assets/fonts/lota-grotesque/Los Andes  Lota Grotesque Alt 1 Semi Bold.otf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Lota";
+  src: url("/assets/fonts/lota-grotesque/Los Andes  Lota Grotesque Alt 1 Regular.otf");
+  font-style: normal;
+  font-weight: 500;
 }

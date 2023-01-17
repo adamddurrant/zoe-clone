@@ -1,15 +1,8 @@
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Avatar({ name, picture }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <div
-      className='flex items-center'
-      onMouseOver={() => setIsOpen(!isOpen)}
-      onMouseOut={() => setIsOpen(!isOpen)}
-    >
+    <div className='flex items-center'>
       <div className='w-12 h-12 relative mr-4'>
         <Image
           src={picture.url}

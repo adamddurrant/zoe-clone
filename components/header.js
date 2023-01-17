@@ -17,7 +17,7 @@ export default function Header() {
     <NavbarNoPadding
       fluid={true}
       rounded={true}
-      className='mx-auto py-8 max-w-screen-2xl '
+      className='mx-auto py-12 max-w-screen-2xl '
     >
       <Navbar.Brand href='/'>
         <img
@@ -27,7 +27,7 @@ export default function Header() {
           width={90}
           height={32}
         />
-        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white'>
+        <span className='self-center whitespace-nowrap text-xl dark:text-white'>
           Articles
         </span>
       </Navbar.Brand>
@@ -101,7 +101,7 @@ export default function Header() {
               id='dropdown'
               inline
               label='Health Conditions'
-              className='w-[50%'
+              className='w-[50%]'
             >
               <Dropdown.Item>Heart Health</Dropdown.Item>
               <Dropdown.Item>Blood Pressure</Dropdown.Item>
