@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
+import Date from "./date";
 
 export default function HomeHero({
   title,
@@ -10,7 +11,6 @@ export default function HomeHero({
   author,
   slug,
 }) {
-  console.log(title);
   return (
     <section className='w-full mt-12 mb-12'>
       <div className='top-grid'>
@@ -22,6 +22,9 @@ export default function HomeHero({
                   <div className='card flex flex-col p-6 border h-full justify-between'>
                     <a href={`/posts/${slug}`}>
                       <div className='font-bold font-Nantes text-2xl'>
+                        <div className='mb-2 text-lg'>
+                          <Date dateString={date} />
+                        </div>
                         {title}
                       </div>
                     </a>
@@ -31,6 +34,9 @@ export default function HomeHero({
                 <li>
                   <div className='card flex flex-col p-6 border h-full justify-between'>
                     <div className='font-bold font-Nantes text-2xl'>
+                      <div className='mb-2 text-lg'>
+                        <Date dateString={date} />
+                      </div>
                       {title}
                     </div>
 
@@ -50,6 +56,9 @@ export default function HomeHero({
                     />
                     <div className='card-text p-6'>
                       <div className='font-bold font-Nantes text-2xl mb-4'>
+                        <div className='mb-2 text-lg'>
+                          <Date dateString={date} />
+                        </div>
                         {title}
                       </div>
                       <Avatar name={author.name} picture={author.picture} />
