@@ -8,11 +8,18 @@ import Head from "next/head";
 import HomeHero from "@/components/home-hero";
 import TheTeam from "@/components/the-team";
 import LatestPodcasts from "@/components/latest-podcasts";
-import ContentBlock from "@/components/home-content-block";
+import EditorsChoice from "@/components/editors-choice";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(0, 3);
+  const podcastPosts = allPosts.filter(function (post) {
+    return post.category.name == "Podcast";
+  });
+  const editorPosts = allPosts.filter(function (post) {
+    return post.editors == true;
+  });
+  console.log(editorPosts);
+
   return (
     <>
       <Layout>
@@ -30,8 +37,8 @@ export default function Index({ allPosts }) {
             excerpt={heroPost.excerpt}
           />
           <TheTeam />
-          {LatestPodcasts.length > 0 && <LatestPodcasts posts={morePosts} />}
-          <ContentBlock />
+          {LatestPodcasts.length > 0 && <LatestPodcasts posts={podcastPosts} />}
+          <EditorsChoice posts={editorPosts} />
         </Container>
       </Layout>
     </>

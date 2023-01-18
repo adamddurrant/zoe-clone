@@ -2,6 +2,7 @@ import { Navbar } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
 import styled from "styled-components";
 import { FiHeadphones } from "react-icons/fi";
+import { useState } from "react";
 
 export default function Header() {
   const NavbarNoPadding = styled(Navbar)`
@@ -11,18 +12,22 @@ export default function Header() {
     padding-bottom: 2rem;
   `;
 
+  const [logoHover, setLogoHover] = useState(false);
+
   return (
     <NavbarNoPadding fluid={true} rounded={true} className='mx-auto container'>
       <Navbar.Brand href='/'>
         <img
+          onMouseEnter={() => setLogoHover(true)}
+          onMouseLeave={() => setLogoHover(false)}
           src='/assets/logos/desktop.svg'
           className='mr-3 h-6 sm:h-9'
           alt='ZOE Logo'
           width={90}
           height={32}
         />
-        <span className='self-center whitespace-nowrap text-xl dark:text-white'>
-          Articles
+        <span className='self-center whitespace-nowrap text-xl hover:text-grey-700'>
+          {logoHover ? "Home" : "Articles"}
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />
@@ -121,9 +126,9 @@ export default function Header() {
     // <nav
     //   role='navigation'
     //   aria-label='Primary menu'
-    //   class='default-nav grid grid-flow-col gap-x-[43px] w-full items-center'
+    //   className='default-nav grid grid-flow-col gap-x-[43px] w-full items-center'
     // >
-    //   <div class='block'></div>
+    //   <div className='block'></div>
 
     //   <ul role='menubar' className='flex justify-end list-none'>
     //     <li role='menuitem' className='list-item list-none py-[12px] px-4'>
@@ -143,9 +148,9 @@ export default function Header() {
     //     </li>
     //   </ul>
 
-    //   <div class='block px-[8px] py-[24px]'>
+    //   <div className='block px-[8px] py-[24px]'>
     //     <a href='/'>
-    //       <div class='Logo__StyledLogo-sc-rgx023-0 fmaVPR logo-container-desktop'>
+    //       <div className='Logo__StyledLogo-sc-rgx023-0 fmaVPR logo-container-desktop'>
     //         <Image
     //           src='/assets/logos/desktop.png'
     //           alt='logo'
@@ -172,7 +177,7 @@ export default function Header() {
     //       </a>
     //     </li>
     //   </ul>
-    //   <div class='block'></div>
+    //   <div className='block'></div>
     // </nav>
   );
 }
