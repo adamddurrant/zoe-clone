@@ -13,7 +13,6 @@ export default function BylineModal({
   picture,
   name,
 }) {
-  console.log(picture);
   return (
     <>
       <div onClick={() => setIsOpen(false)} />

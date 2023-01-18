@@ -15,6 +15,8 @@ export default function PostHeader({
   reviewer,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const credit = coverImage.responsiveImage.title;
+
   return (
     <>
       <div
@@ -34,7 +36,7 @@ export default function PostHeader({
           </div>
           <PostTitle>{title}</PostTitle>
           <div className='mb-6 text-lg'>{excerpt}</div>
-          <div id='bylines' className='flex relative max-sm:flex-wrap'>
+          <div id='bylines' className='flex relative max-sm:flex-wrap mt-12'>
             <div
               className='block md:mb-12 cursor-pointer max-sm:w-full'
               onClick={() => setIsOpen(!isOpen)}
@@ -71,6 +73,9 @@ export default function PostHeader({
             title={title}
             responsiveImage={coverImage.responsiveImage}
           />
+          <div className='credit text-xs text-grey-200 text-right mt-2'>
+            Credit: {credit}
+          </div>
         </div>
       </div>
     </>

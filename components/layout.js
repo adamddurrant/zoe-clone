@@ -3,6 +3,7 @@ import Footer from "./footer";
 import Meta from "./meta";
 import Header from "./header";
 import Container from "./container";
+import EmailSignup from "./email-signup";
 
 export default function Layout({ preview, children }) {
   return (
@@ -15,6 +16,7 @@ export default function Layout({ preview, children }) {
         </Container>
         <main>{children}</main>
       </div>
+      <EmailSignup />
       <Footer />
     </>
   );

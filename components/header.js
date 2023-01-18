@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Navbar } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
 import styled from "styled-components";
@@ -7,18 +5,14 @@ import { FiHeadphones } from "react-icons/fi";
 
 export default function Header() {
   const NavbarNoPadding = styled(Navbar)`
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   `;
 
   return (
-    <NavbarNoPadding
-      fluid={true}
-      rounded={true}
-      className='mx-auto py-12 container'
-    >
+    <NavbarNoPadding fluid={true} rounded={true} className='mx-auto container'>
       <Navbar.Brand href='/'>
         <img
           src='/assets/logos/desktop.svg'

@@ -74,6 +74,10 @@
   display: grid;
 }
 
+.two-col {
+  column-rule: 1px solid #d8d8d8;
+}
+
 .team-person {
   padding-bottom: 30px;
 }

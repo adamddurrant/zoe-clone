@@ -11,7 +11,6 @@ export default function PostPreview({
   author,
   slug,
 }) {
-  console.log(excerpt);
   return (
     <div>
       <div className='mb-5 h-[300px]'>

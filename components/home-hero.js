@@ -20,59 +20,65 @@ export default function HomeHero({
             <div className='first-slot'>
               <ul className='ul-grid h-full'>
                 <li>
-                  <div className='card flex flex-col p-6 border h-full justify-between'>
-                    <div className='font-bold font-Nantes text-xl flex mb-4'>
-                      <div className='basis-[70%] flex-col pr-3'>
-                        <div className='mb-2 text-lg'>
-                          <Date dateString={date} />
+                  <Link href={`/posts/${slug}`}>
+                    <div className='card flex flex-col p-6 border h-full justify-between'>
+                      <div className='font-bold font-Nantes text-xl flex mb-4'>
+                        <div className='basis-[70%] flex-col pr-3'>
+                          <div className='mb-2 text-lg'>
+                            <Date dateString={date} />
+                          </div>
+                          {title}
                         </div>
-                        {title}
+                        <div className='basis-[30%] flex-col'>
+                          <div className='h-[80px] w-[80px] mt-[10px]'>
+                            <CoverImage
+                              title={title}
+                              responsiveImage={coverImage.responsiveImage}
+                            />{" "}
+                          </div>
+                        </div>
                       </div>
-                      <div className='basis-[30%] flex-col'>
-                        <CoverImage
-                          title={title}
-                          responsiveImage={coverImage.responsiveImage}
-                          slug={slug}
-                        />{" "}
-                      </div>
+                      <HomeAvatar name={author.name} picture={author.picture} />
                     </div>
-                    <HomeAvatar name={author.name} picture={author.picture} />
-                  </div>
+                  </Link>
                 </li>
                 <li>
-                  <div className='card flex flex-col p-6 border h-full justify-between'>
-                    <div className='font-bold font-Nantes text-xl flex mb-4'>
-                      <div className='basis-[70%] flex-col pr-3'>
-                        <div className='mb-2 text-lg'>
-                          <Date dateString={date} />
+                  <Link href={`/posts/${slug}`}>
+                    <div className='card flex flex-col p-6 border h-full justify-between'>
+                      <div className='font-bold font-Nantes text-xl flex mb-4'>
+                        <div className='basis-[70%] flex-col pr-3'>
+                          <div className='mb-2 text-lg'>
+                            <Date dateString={date} />
+                          </div>
+                          {title}
                         </div>
-                        {title}
+                        <div className='basis-[30%] flex-col'>
+                          <div className='h-[80px] w-[80px] mt-[10px]'>
+                            <CoverImage
+                              title={title}
+                              responsiveImage={coverImage.responsiveImage}
+                            />{" "}
+                          </div>
+                        </div>
                       </div>
-                      <div className='basis-[30%] flex-col'>
-                        <CoverImage
-                          title={title}
-                          responsiveImage={coverImage.responsiveImage}
-                          slug={slug}
-                        />{" "}
-                      </div>
+                      <HomeAvatar name={author.name} picture={author.picture} />
                     </div>
-                    <HomeAvatar name={author.name} picture={author.picture} />
-                  </div>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className='second-slot border '>
               <ul>
                 <li>
-                  <div className='wrapper h-full'>
-                    <div className='h-full'>
-                      <CoverImage
-                        title={title}
-                        responsiveImage={coverImage.responsiveImage}
-                        slug={slug}
-                      />
-                    </div>
-                    <Link href={`/posts/${slug}`}>
+                  <Link href={`/posts/${slug}`}>
+                    <div className='wrapper h-full'>
+                      <div className='h-full'>
+                        <CoverImage
+                          title={title}
+                          responsiveImage={coverImage.responsiveImage}
+                        />
+                      </div>
+
                       <div className='card-text p-6 flex flex-col justify-between h-full'>
                         <div className='font-bold font-Nantes text-xl mb-4 flex-col'>
                           <div className='mb-2 text-lg'>
@@ -90,8 +96,8 @@ export default function HomeHero({
                           />
                         </div>
                       </div>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 </li>
               </ul>
             </div>

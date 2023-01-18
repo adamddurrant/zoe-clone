@@ -8,6 +8,7 @@ import Head from "next/head";
 import HomeHero from "@/components/home-hero";
 import TheTeam from "@/components/the-team";
 import LatestPodcasts from "@/components/latest-podcasts";
+import ContentBlock from "@/components/home-content-block";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -30,6 +31,7 @@ export default function Index({ allPosts }) {
           />
           <TheTeam />
           {LatestPodcasts.length > 0 && <LatestPodcasts posts={morePosts} />}
+          <ContentBlock />
         </Container>
       </Layout>
     </>
