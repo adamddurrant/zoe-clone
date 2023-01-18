@@ -9,7 +9,7 @@ export default function TheTeam() {
           className='text-center md:text-left justify-around items-center text-black flex flex-col md:flex-row hover:black-transparent hover:text-black hover:border-black border-transparent border px-4 md:px-8'
         >
           <div className='md:pr-7 md:py-10 md:w-1/2 sm:mx-2 md:mx-6 '>
-            <span className='text-xl sm:text-2xl leading-tight md:text-3xl xl:text-3xl font-Nantes '>
+            <span className='text-xl sm:text-2xl leading-tight md:text-3xl xl:text-3xl font-Lota font-light'>
               Our team of scientists, dieticians, nutritionists, researchers,
               editors and writers ensure our content is accurate, up-to-date,
               and inclusive.
@@ -18,7 +18,8 @@ export default function TheTeam() {
               Meet the team
             </button>
           </div>
-          <div className='max-w-xs mx-auto w-full md:w-1/4 xl:w-1/4 p-2 lg:p-2'>
+
+          <div className='md:w-1/4 py-4 md:py-8 mx-3'>
             <div className='team-person flex'>
               <img
                 src='/assets/images/tim-newman.jpg'
@@ -46,7 +47,7 @@ export default function TheTeam() {
               />
               <div className='name pl-1'>
                 <h3 className='block font-medium text-md'>Tim Newman</h3>
-                <p className='block'>Registered Dietitian</p>
+                <p className='block'>Editor in Chief</p>
               </div>
             </div>
           </div>
@@ -85,7 +86,6 @@ export default function TheTeam() {
           </div>
         </a>
       </div>
-      <hr className='border-accent-2 mt-8 mb-8' />
     </>
   );
 }

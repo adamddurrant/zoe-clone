@@ -2,6 +2,7 @@ import React from "react";
 import CoverImage from "./cover-image";
 import Date from "./date";
 import HomeAvatar from "./home-avatar";
+import Link from "next/link";
 
 export default function HomeHero({
   title,
@@ -20,8 +21,8 @@ export default function HomeHero({
               <ul className='ul-grid h-full'>
                 <li>
                   <div className='card flex flex-col p-6 border h-full justify-between'>
-                    <div className='font-bold font-Nantes text-2xl flex mb-4'>
-                      <div className='basis-[70%] flex-col'>
+                    <div className='font-bold font-Nantes text-xl flex mb-4'>
+                      <div className='basis-[70%] flex-col pr-3'>
                         <div className='mb-2 text-lg'>
                           <Date dateString={date} />
                         </div>
@@ -40,8 +41,8 @@ export default function HomeHero({
                 </li>
                 <li>
                   <div className='card flex flex-col p-6 border h-full justify-between'>
-                    <div className='font-bold font-Nantes text-2xl flex mb-4'>
-                      <div className='basis-[70%] flex-col'>
+                    <div className='font-bold font-Nantes text-xl flex mb-4'>
+                      <div className='basis-[70%] flex-col pr-3'>
                         <div className='mb-2 text-lg'>
                           <Date dateString={date} />
                         </div>
@@ -71,21 +72,25 @@ export default function HomeHero({
                         slug={slug}
                       />
                     </div>
-                    <div className='card-text p-6 flex flex-col justify-between h-full'>
-                      <div className='font-bold font-Nantes text-2xl mb-4 flex-col'>
-                        <div className='mb-2 text-lg'>
-                          <Date dateString={date} />
+                    <Link href={`/posts/${slug}`}>
+                      <div className='card-text p-6 flex flex-col justify-between h-full'>
+                        <div className='font-bold font-Nantes text-xl mb-4 flex-col'>
+                          <div className='mb-2 text-lg'>
+                            <Date dateString={date} />
+                          </div>
+                          <div className='text-2xl mb-2'>{title}</div>
+                          <div className='text-lg font-Lota font-light'>
+                            {excerpt}
+                          </div>
                         </div>
-                        <div className='text-3xl mb-2'>{title}</div>
-                        <div className=' text-lg'>{excerpt}</div>
+                        <div className='no-underline flex mt-3 '>
+                          <HomeAvatar
+                            name={author.name}
+                            picture={author.picture}
+                          />
+                        </div>
                       </div>
-                      <div className='no-underline flex mt-3'>
-                        <HomeAvatar
-                          name={author.name}
-                          picture={author.picture}
-                        />
-                      </div>
-                    </div>
+                    </Link>
                   </div>
                 </li>
               </ul>
@@ -94,31 +99,47 @@ export default function HomeHero({
         </div>
         <div className='slot-2 border'>
           <div className='card'>
-            <h2 className='bg-yellow-200 text-center p-2'>Trending Articles</h2>
+            <h2 className='bg-[#fac928] text-center p-2'>Trending</h2>
             <ul className=''>
               <li>
                 <div className=''>
                   <div className='card-text p-6'>
-                    <div className='font-bold font-Nantes text-2xl mb-5'>
-                      {title}
-                      <br />
-                      <span className='text-sm'>{author.name}</span>
-                    </div>
-                    <div className='font-bold font-Nantes text-2xl mb-5'>
-                      {title}
-                      <br />
-                      <span className='text-sm'>{author.name}</span>
-                    </div>
-                    <div className='font-bold font-Nantes text-2xl mb-5'>
-                      {title}
-                      <br />
-                      <span className='text-sm'>{author.name}</span>
-                    </div>
-                    <div className='font-bold font-Nantes text-2xl'>
-                      {title}
-                      <br />
-                      <span className='text-sm'>{author.name}</span>
-                    </div>
+                    <Link href={`/posts/${slug}`}>
+                      <div className='font-bold font-Nantes text-xl mb-5'>
+                        {title}
+                        <br />
+                        <span className='text-sm font-Lota font-light'>
+                          {author.name}
+                        </span>
+                      </div>
+                    </Link>
+                    <Link href={`/posts/${slug}`}>
+                      <div className='font-bold font-Nantes text-xl mb-5'>
+                        {title}
+                        <br />
+                        <span className='text-sm font-Lota font-light'>
+                          {author.name}
+                        </span>
+                      </div>
+                    </Link>
+                    <Link href={`/posts/${slug}`}>
+                      <div className='font-bold font-Nantes text-xl mb-5'>
+                        {title}
+                        <br />
+                        <span className='text-sm font-Lota font-light'>
+                          {author.name}
+                        </span>
+                      </div>
+                    </Link>
+                    <Link href={`/posts/${slug}`}>
+                      <div className='font-bold font-Nantes text-xl'>
+                        {title}
+                        <br />
+                        <span className='text-sm font-Lota font-light'>
+                          {author.name}
+                        </span>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </li>

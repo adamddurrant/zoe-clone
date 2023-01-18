@@ -7,8 +7,8 @@ import { FiHeadphones } from "react-icons/fi";
 
 export default function Header() {
   const NavbarNoPadding = styled(Navbar)`
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
     padding-top: 20px;
     padding-bottom: 20px;
   `;
@@ -17,7 +17,7 @@ export default function Header() {
     <NavbarNoPadding
       fluid={true}
       rounded={true}
-      className='mx-auto py-12 max-w-screen-2xl'
+      className='mx-auto py-12 container'
     >
       <Navbar.Brand href='/'>
         <img

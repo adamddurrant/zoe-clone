@@ -7,11 +7,10 @@ export default function Intro() {
         <div className='flex-col items-center basis-auto'>
           <div className='py-2'>
             <span className='text-[1.25rem] font-Nantes'>
-              Learn from the team behind the world's largest in-depth nutrition
-              study.
+              Learn from the team behind the world's largest nutrition study.
             </span>
             <br />
-            <span className='text-[1.3rem] font-semibold w-full'>
+            <span className='text-[1.3rem] font-medium w-full'>
               Know more, be healthier
             </span>
           </div>
