@@ -3,7 +3,8 @@ import Date from "./date";
 import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import Bread from "./breadcrumb";
-import BylineModal from "./byline-modal";
+import AuthorByline from "./modals/author-byline";
+import ReviewerByline from "./modals/reviewer-byline";
 import { useState } from "react";
 
 export default function PostHeader({
@@ -14,8 +15,19 @@ export default function PostHeader({
   excerpt,
   reviewer,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [AuthorIsOpen, setAuthorIsOpen] = useState(false);
+  const [ReviewerIsOpen, setReviewerIsOpen] = useState(false);
   const credit = coverImage.responsiveImage.title;
+
+  const handleAuthorOpen = () => {
+    setAuthorIsOpen(!AuthorIsOpen);
+    setReviewerIsOpen(false);
+  };
+
+  const handleReviewerOpen = () => {
+    setReviewerIsOpen(!ReviewerIsOpen);
+    setAuthorIsOpen(false);
+  };
 
   return (
     <>
@@ -39,28 +51,42 @@ export default function PostHeader({
           <div id='bylines' className='flex relative max-sm:flex-wrap mt-12'>
             <div
               className='block md:mb-12 cursor-pointer max-sm:w-full'
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleAuthorOpen}
             >
               <p className='mb-3 text-lg'>Written by:</p>
               <div>
                 <Avatar name={author.name} picture={author.picture} />
               </div>
             </div>
-            <div className='md:block md:mb-12 ml-12 max-sm:w-full max-sm:ml-0 max-sm:mt-4'>
+            <div
+              className='md:block md:mb-12 ml-12 max-sm:w-full max-sm:ml-0 max-sm:mt-4 cursor-pointer'
+              onClick={handleReviewerOpen}
+            >
               <p className='mb-3 text-lg'>Reviewed by:</p>
               <Avatar name={reviewer.name} picture={reviewer.picture} />
             </div>
           </div>
           <div id='author-modal' className='relative'>
-            {isOpen && (
-              <BylineModal
-                setIsOpen={setIsOpen}
+            {AuthorIsOpen && (
+              <AuthorByline
                 name={author.name}
                 picture={author.picture}
                 bio={author.bio}
                 twitter={author.twitter}
                 linkedin={author.linkedin}
                 personal={author.personal}
+              />
+            )}
+          </div>
+          <div id='reviewer-modal' className='relative'>
+            {ReviewerIsOpen && (
+              <ReviewerByline
+                name={reviewer.name}
+                picture={reviewer.picture}
+                bio={reviewer.bio}
+                twitter={reviewer.twitter}
+                linkedin={reviewer.linkedin}
+                personal={reviewer.personal}
               />
             )}
           </div>

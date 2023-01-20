@@ -1,9 +1,17 @@
 /* @src/components/Modal.module.css */
 
-.position {
+.authorposition {
   position: absolute;
   top: 0%;
   left: 0%;
+  margin-top: -37px;
+  z-index: 999999;
+}
+
+.reviewerposition {
+  position: absolute;
+  top: 0%;
+  right: 10%;
   margin-top: -37px;
   z-index: 999999;
 }

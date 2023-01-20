@@ -1,22 +1,24 @@
 import React from "react";
-import styles from "./Modal.module.css";
-import Avatar from "./avatar";
-import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
+import styles from "./byline-modal.module.css";
+import {
+  AiOutlineTwitter,
+  AiFillLinkedin,
+  AiOutlineLink,
+} from "react-icons/ai";
 import Link from "next/link";
-import SectionSeparator from "./section-separator";
 
-export default function BylineModal({
-  setIsOpen,
+export default function AuthorByline({
   linkedin,
   twitter,
   bio,
+  personal,
   picture,
   name,
 }) {
   return (
     <>
       <div onClick={() => setIsOpen(false)} />
-      <div className={styles.position}>
+      <div className={styles.authorposition}>
         <div className={styles.modal}>
           <div className={styles.modalContent}>
             <div className='flex'>
@@ -31,15 +33,18 @@ export default function BylineModal({
                 </div>
               </div>
               <div className='flex-col mb-4'>
-                <div className='text-lg font-bold block no-underline'>
+                <div className='text-lg font-medium block no-underline'>
                   {name}
                 </div>
                 <div className='socials flex items-center'>
                   <Link href={twitter} className='pr-2'>
                     <AiOutlineTwitter className='w-5 h-auto' />
                   </Link>
-                  <Link href={linkedin}>
+                  <Link href={linkedin} className='pr-2'>
                     <AiFillLinkedin className='w-5 h-auto' />
+                  </Link>
+                  <Link href={personal}>
+                    <AiOutlineLink className='w-5 h-auto' />
                   </Link>
                 </div>
               </div>

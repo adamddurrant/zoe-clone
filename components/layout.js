@@ -14,7 +14,7 @@ export default function Layout({ preview, children }) {
         <Container>
           <Header />
         </Container>
-        <main>{children}</main>
+        <main id='main'>{children}</main>
       </div>
       <EmailSignup />
       <Footer />
