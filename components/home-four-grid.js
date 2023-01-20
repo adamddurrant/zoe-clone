@@ -1,14 +1,12 @@
 import React from "react";
-import HomeHeader from "./home-header";
 import PostPreview from "./post-preview";
 
-export default function EditorsChoice({ posts }) {
+export default function FourGrid({ posts }) {
   return (
     <>
-      <HomeHeader text={"Editors Picks"} />
       <section>
         <div className=' w-full md:w-full relative'>
-          <div className='two-col columns-4 md:gap-x-16 lg:gap-x-16 mb-32'>
+          <div className='two-col columns-2 md:gap-x-16 lg:gap-x-16 mb-32'>
             {posts?.map((post) => (
               <div className='mb-12' key={post.slug}>
                 <PostPreview
