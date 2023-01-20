@@ -1,21 +1,17 @@
 import { Navbar } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
-import styled from "styled-components";
 import { FiHeadphones } from "react-icons/fi";
 import { useState } from "react";
 
 export default function Header() {
-  const NavbarNoPadding = styled(Navbar)`
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  `;
-
   const [logoHover, setLogoHover] = useState(false);
 
   return (
-    <NavbarNoPadding fluid={true} rounded={true} className='mx-auto container'>
+    <Navbar
+      fluid={true}
+      rounded={true}
+      className='mx-auto container pr-0 pl-0 pt-6 pb-6'
+    >
       <Navbar.Brand href='/'>
         <img
           onMouseEnter={() => setLogoHover(true)}
@@ -121,7 +117,7 @@ export default function Header() {
           </button>
         </Navbar.Link>
       </Navbar.Collapse>
-    </NavbarNoPadding>
+    </Navbar>
 
     // <nav
     //   role='navigation'

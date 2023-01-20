@@ -20,7 +20,6 @@ export default function Index({ allPosts }) {
   const FourGridPosts = allPosts.filter(function (post) {
     return post.category.name != "Podcast";
   });
-  console.log(FourGridPosts);
 
   return (
     <>
