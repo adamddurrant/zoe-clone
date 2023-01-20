@@ -11,14 +11,14 @@ export default function Footer() {
           <a
             rel='noopener noreferrer'
             href='#'
-            className='flex justify-center space-x-3 lg:justify-start'
+            className='flex justify-center space-x-3 lg:justify-start max-sm:space-x-0'
           >
             <div className='flex items-center justify-center w-24 h-12 rounded-full dark:bg-violet-400'>
               <img
                 onMouseEnter={() => setLogoHover(true)}
                 onMouseLeave={() => setLogoHover(false)}
                 src='/assets/logos/desktop.svg'
-                className=' h-6 sm:h-9'
+                className='h-6 sm:h-9'
                 alt='ZOE Logo'
                 width={90}
                 height={32}

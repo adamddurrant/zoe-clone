@@ -25,8 +25,8 @@ export default function Alert({ preview }) {
             </>
           ) : (
             <>
-              <div className='flex justify-center items-center'>
-                <AiOutlineBell className='mr-1' />{" "}
+              <div className='flex justify-center items-center max-sm:items-start'>
+                <AiOutlineBell className='mr-1 max-sm:mt-[2px]' />{" "}
                 <span>
                   Watch ZOE's Tim Spector on Diary of a CEO{" "}
                   <a

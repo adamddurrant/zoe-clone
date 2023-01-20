@@ -13,7 +13,7 @@ export default function PostPreview({
 }) {
   return (
     <div>
-      <div className='mb-5 h-[300px]'>
+      <div className='mb-5 h-[300px] max-sm:h-[150px]'>
         <CoverImage
           slug={slug}
           title={title}
@@ -25,9 +25,11 @@ export default function PostPreview({
           <div className='text-lg mb-2'>
             <Date dateString={date} />
           </div>
-          <div className='font-Nantes font-medium'>{title}</div>
+          <div className='font-Nantes font-medium max-sm:text-[20px] max-sm:mb-2'>
+            {title}
+          </div>
         </h3>
-        <p className='text-lg leading-relaxed mb-4 font-Lota'>
+        <p className='text-lg leading-relaxed mb-4 font-Lota max-sm:text-sm'>
           {excerpt.substring(0, 85) + "..."}
         </p>
         <HomeAvatar name={author.name} picture={author.picture} />

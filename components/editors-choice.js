@@ -8,7 +8,7 @@ export default function EditorsChoice({ posts }) {
       <HomeHeader text={"Editors Picks"} />
       <section>
         <div className=' w-full md:w-full relative'>
-          <div className='two-col columns-4 md:gap-x-16 lg:gap-x-16 mb-32'>
+          <div className='two-col columns-3 md:gap-x-16 lg:gap-x-16 mb-32 max-sm:columns-1 max-sm:gap-y-5'>
             {posts?.map((post) => (
               <div className='mb-12' key={post.slug}>
                 <PostPreview

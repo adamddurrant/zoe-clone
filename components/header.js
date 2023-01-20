@@ -17,7 +17,7 @@ export default function Header() {
           onMouseEnter={() => setLogoHover(true)}
           onMouseLeave={() => setLogoHover(false)}
           src='/assets/logos/desktop.svg'
-          className='mr-3 h-6 sm:h-9'
+          className='mr-3 h-6 sm:h-9 max-sm:mr-0'
           alt='ZOE Logo'
           width={90}
           height={32}

@@ -14,9 +14,9 @@ export default function HomeHero({
 }) {
   return (
     <section className='w-full mt-12 mb-12'>
-      <div className='top-grid'>
+      <div className='top-grid max-sm:grid-cols-1'>
         <div className='slot-1'>
-          <div className='slot-1-grid spotlight h-full'>
+          <div className='slot-1-grid spotlight h-full max-sm:flex max-sm:flex-col-reverse'>
             <div className='first-slot'>
               <ul className='ul-grid h-full'>
                 <li>
@@ -111,10 +111,10 @@ export default function HomeHero({
                 <div className=''>
                   <div className='card-text p-6'>
                     <Link href={`/posts/${slug}`}>
-                      <div className='font-bold font-Nantes text-xl mb-5'>
+                      <div className='font-bold font-Nantes text-xl mb-5 '>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light'>
+                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
                           {author.name}
                         </span>
                       </div>
@@ -123,7 +123,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl mb-5'>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light'>
+                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
                           {author.name}
                         </span>
                       </div>
@@ -132,7 +132,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl mb-5'>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light'>
+                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
                           {author.name}
                         </span>
                       </div>
@@ -141,7 +141,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl'>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light'>
+                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
                           {author.name}
                         </span>
                       </div>

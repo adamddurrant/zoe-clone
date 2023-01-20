@@ -25,7 +25,7 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article>
               <Head>
-                <title>{post.title}</title>
+                <title>{post.title} | ZOE</title>
                 <meta property='og:image' content={post.ogImage.url} />
               </Head>
               <PostHeader
