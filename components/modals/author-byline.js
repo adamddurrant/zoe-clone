@@ -53,7 +53,7 @@ export default function AuthorByline({
             <hr className='border-accent-2 mt-3 mb-3' />
             <p>
               Learn about our{" "}
-              <a className='text-[#445dc3]' href='#'>
+              <a className='text-[#445dc3]' href='/editorial-process'>
                 editorial process
               </a>
             </p>

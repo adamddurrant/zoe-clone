@@ -99,7 +99,11 @@
 }
 
 @media not all and (min-width: 640px) {
-  .position {
+  .authorposition {
     margin-top: -95px;
+  }
+  .reviewerposition {
+    right: 8%;
+    margin-top: 9px;
   }
 }
