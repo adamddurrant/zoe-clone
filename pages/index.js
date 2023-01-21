@@ -8,6 +8,7 @@ import TheTeam from "@/components/the-team";
 import LatestPodcasts from "@/components/latest-podcasts";
 import EditorsChoice from "@/components/editors-choice";
 import FourGrid from "@/components/home-four-grid";
+import EmailSignup from "@/components/email-signup";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -40,6 +41,7 @@ export default function Index({ allPosts }) {
           <TheTeam />
           {LatestPodcasts.length > 0 && <LatestPodcasts posts={podcastPosts} />}
           <FourGrid posts={FourGridPosts} key={FourGridPosts.slug} />
+          <EmailSignup />
           <EditorsChoice posts={editorPosts} key={editorPosts.slug} />
         </Container>
       </Layout>

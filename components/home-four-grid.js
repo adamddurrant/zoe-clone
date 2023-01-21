@@ -29,7 +29,7 @@ export default function FourGrid({ posts }) {
           </div>
         </div>
         <div className='w-full md:w-full relative'>
-          <div className='two-col columns-4 md:gap-x-16 lg:gap-x-16 mb-32 max-sm:flex max-sm:flex-wrap max-sm:gap-5'>
+          <div className='two-col columns-4 md:gap-x-16 lg:gap-x-16 mb-12 max-sm:flex max-sm:flex-wrap max-sm:gap-5'>
             {FourColPosts?.map((post) => (
               <div
                 className='mb-12 avoid-break flex flex-col box-border max-sm:flex-1'

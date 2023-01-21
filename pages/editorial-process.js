@@ -18,7 +18,7 @@ export default function EditorialProcess({ process }) {
   );
 }
 
-// fetch process data and make markdown formatting variable
+// fetch process page data
 export async function getStaticProps({ preview = false }) {
   const process = (await getEditorialProcessContent(preview)) || [];
   const content = await markdownToHtml(process?.content || "");
