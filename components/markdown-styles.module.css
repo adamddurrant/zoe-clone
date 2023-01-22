@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-xl leading-9 font-Lota text-[#2d3246] font-light;
+  @apply text-lg leading-9 font-Lota text-[#2d3246] font-light;
 }
 
 .markdown p,

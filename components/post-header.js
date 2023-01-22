@@ -33,13 +33,13 @@ export default function PostHeader({
     <>
       <div
         id='container'
-        className='flex justify-between pt-12 max-sm:flex-wrap'
+        className='flex justify-between pt-12 max-sm:flex-wrap max-sm:pt-2'
       >
         <div
           id='left'
           className='flex-col w-[50%] pr-6  max-sm:w-[100%] max-sm:p-0'
         >
-          <div className='mb-6 text-lg flex justify-between'>
+          <div className='mb-6 text-lg flex justify-between items-center'>
             <Bread />
             <div className='published'>
               <span className='text-sm bold'>Published:</span>{" "}
