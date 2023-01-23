@@ -7,21 +7,18 @@ export default function EditorsChoice({ posts }) {
     <>
       <HomeHeader text={"Editors Picks"} />
       <section>
-        <div className=' w-full md:w-full relative'>
-          <div className='two-col columns-3 md:gap-x-16 lg:gap-x-16 mb-32 max-sm:columns-1 max-sm:gap-y-5'>
-            {posts?.map((post) => (
-              <div className='mb-12' key={post.slug}>
-                <PostPreview
-                  title={post.title}
-                  coverImage={post.coverImage}
-                  date={post.date}
-                  author={post.author}
-                  slug={post.slug}
-                  excerpt={post.excerpt}
-                />
-              </div>
-            ))}
-          </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-6 lg:gap-x-8 gap-y-20 md:gap-y-32 mb-20 max-sm:gap-y-5'>
+          {posts.map((post) => (
+            <PostPreview
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+          ))}
         </div>
       </section>
     </>

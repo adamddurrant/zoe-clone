@@ -46,6 +46,10 @@
   }
 }
 
+#email-signup-box {
+  --tw-ring-shadow: 0 0 rgb(255, 255, 255) !important;
+}
+
 .ul-grid {
   grid-gap: 1.5rem;
   display: grid;

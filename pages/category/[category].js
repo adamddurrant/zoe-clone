@@ -10,14 +10,16 @@ import {
 } from "@/lib/api";
 import PostTitle from "@/components/post-title";
 import Head from "next/head";
-import markdownToHtml from "@/lib/markdownToHtml";
 
 export default function Post({ category, morePosts, preview, allCategories }) {
   const router = useRouter();
   const currentPath = router.asPath;
   const content = morePosts.morePosts;
+  const filteredContent = content.filter(
+    (post) => post.category.slug === category.slug
+  );
 
-  console.log(morePosts);
+  console.log(filteredContent);
 
   return (
     <Layout preview={preview}>
@@ -43,9 +45,8 @@ export default function Post({ category, morePosts, preview, allCategories }) {
 
               <hr className='py-4 mt-6' />
               <div className=' w-full md:w-full relative'>
-                <div className='grid grid-cols-3 md:gap-x-16 lg:gap-x-16 gap-y-20 md:gap-y-32 mb-32 max-sm:grid-cols-1'>
-                  {/* Here I think I need an if statement to map only posts that match the category name */}
-                  {content.map((post) => (
+                <div className='grid grid-cols-3 md:gap-x-16 lg:gap-x-16 gap-y-16 md:gap-y-16 mb-32 max-sm:grid-cols-1'>
+                  {filteredContent.map((post) => (
                     <PostPreview
                       key={post.slug}
                       title={post.title}

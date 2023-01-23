@@ -10,7 +10,7 @@ export default function Header() {
     <Navbar
       fluid={true}
       rounded={true}
-      className='mx-auto container pr-0 pl-0 pt-6 pb-6'
+      className='mx-auto container !px-0 pt-6 pb-6'
     >
       <Navbar.Brand href='/'>
         <img

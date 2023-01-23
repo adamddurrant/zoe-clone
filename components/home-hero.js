@@ -85,8 +85,8 @@ export default function HomeHero({
                             <Date dateString={date} />
                           </div>
                           <div className='text-2xl mb-2'>{title}</div>
-                          <div className='text-lg font-Lota font-light'>
-                            {excerpt}
+                          <div className='text-lg font-Lota font-light max-sm:text-sm'>
+                            {excerpt}...
                           </div>
                         </div>
                         <div className='no-underline flex mt-3 '>
@@ -114,7 +114,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl mb-5 '>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
+                        <span className='text-sm font-Lota font-light max-sm:text-sm'>
                           {author.name}
                         </span>
                       </div>
@@ -123,7 +123,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl mb-5'>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
+                        <span className='text-sm font-Lota font-light max-sm:text-sm'>
                           {author.name}
                         </span>
                       </div>
@@ -132,7 +132,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl mb-5'>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
+                        <span className='text-sm font-Lota font-light max-sm:text-sm'>
                           {author.name}
                         </span>
                       </div>
@@ -141,7 +141,7 @@ export default function HomeHero({
                       <div className='font-bold font-Nantes text-xl'>
                         {title}
                         <br />
-                        <span className='text-sm font-Lota font-light max-sm:text-lg'>
+                        <span className='text-sm font-Lota font-light max-sm:text-sm'>
                           {author.name}
                         </span>
                       </div>

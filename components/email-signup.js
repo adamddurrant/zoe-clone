@@ -20,12 +20,12 @@ export default function EmailSignup() {
                   type='email'
                   id='email-signup-box'
                   placeholder='Email'
-                  className='border-none text-xl rounded-tl-md rounded-bl-md overflow-hidden bg-white w-full h-20 max-sm:h-14 '
+                  className='border-none text-xl rounded-tl-md rounded-bl-md overflow-hidden bg-white w-full h-20 max-sm:h-14 max-sm:text-sm'
                 />
                 <input
                   type='submit'
                   value='Subscribe'
-                  className='inline-block pr-4 rounded-tr-md rounded-br-md bg-white text-[#445dc3] text-lg max-sm:text-md'
+                  className='inline-block pr-4 rounded-tr-md rounded-br-md bg-white text-[#445dc3] text-lg max-sm:text-sm !ring-0 !focus:ring-0 !shadow-none !focus:shadow-none !focus:outline-none !border-none !focus:border-none'
                 />
               </form>
             </div>
