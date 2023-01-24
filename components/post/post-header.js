@@ -123,7 +123,7 @@ export default function PostHeader({
           id='right'
           className='flex flex-col w-[50%] pl-8 max-sm:w-[100%] max-sm:p-0 max-sm:mt-12'
         >
-          <div className='h-[250px]'>
+          <div className='h-full max-sm:h-[250px]'>
             <CoverImage
               title={title}
               responsiveImage={coverImage.responsiveImage}
