@@ -6,13 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "classnames": "2.3.1",
-    "date-fns": "2.28.0",
-    "flowbite": "^1.6.2",
+    "classnames": "2.3.2",
+    "date-fns": "2.29.3",
+    "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.7",
     "next": "latest",
     "react": "^18.2.0",
-    "react-datocms": "1.6.3",
+    "react-datocms": "4.0.8",
     "react-dom": "^18.2.0",
     "react-onclickoutside": "^6.12.2",
     "remark": "14.0.2",
@@ -20,8 +20,8 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.2",
-    "postcss": "8.4.5",
-    "tailwindcss": "^3.0.15"
+    "autoprefixer": "10.4.13",
+    "postcss": "8.4.21",
+    "tailwindcss": "^3.2.4"
   }
 }

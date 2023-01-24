@@ -12,7 +12,7 @@ import Head from "next/head";
 
 export default function Post({ category, morePosts, preview, allCategories }) {
   const router = useRouter();
-  const filteredContent = morePosts.filter(
+  const filteredContent = morePosts?.filter(
     (post) => post.category.slug === category.slug
   );
 

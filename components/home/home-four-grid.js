@@ -3,7 +3,7 @@ import PostPreview from "../post/post-preview";
 
 export default function FourGrid({ posts }) {
   const TwoColPosts = posts.slice(0, 4);
-  const FourColPosts = posts.slice(0, 8);
+  const FourColPosts = posts.slice(0, 4);
 
   return (
     <>
