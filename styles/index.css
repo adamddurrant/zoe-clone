@@ -62,7 +62,7 @@
   justify-content: space-between;
 }
 
-ul-grid-large {
+.ul-grid-large {
   grid-gap: 1.5rem;
   display: grid;
   justify-content: space-between;

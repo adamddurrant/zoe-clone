@@ -22,12 +22,12 @@ export default function HomeHero({
                 <li>
                   <Link href={`/posts/${slug}`}>
                     <div className='card flex flex-col p-6 border h-full justify-between'>
-                      <div className='font-bold font-Nantes text-xl flex mb-4'>
+                      <div className='text-xl flex mb-4'>
                         <div className='basis-[70%] flex-col pr-3'>
                           <div className='mb-2 text-lg'>
                             <Date dateString={date} />
                           </div>
-                          {title}
+                          <span className='font-Nantes'>{title}</span>
                         </div>
                         <div className='basis-[30%] flex-col'>
                           <div className='h-[80px] w-[80px] mt-[10px]'>
@@ -45,12 +45,12 @@ export default function HomeHero({
                 <li>
                   <Link href={`/posts/${slug}`}>
                     <div className='card flex flex-col p-6 border h-full justify-between'>
-                      <div className='font-bold font-Nantes text-xl flex mb-4'>
+                      <div className='text-xl flex mb-4'>
                         <div className='basis-[70%] flex-col pr-3'>
                           <div className='mb-2 text-lg'>
                             <Date dateString={date} />
                           </div>
-                          {title}
+                          <span className='font-Nantes'>{title}</span>
                         </div>
                         <div className='basis-[30%] flex-col'>
                           <div className='h-[80px] w-[80px] mt-[10px]'>
@@ -72,7 +72,7 @@ export default function HomeHero({
                 <li>
                   <Link href={`/posts/${slug}`}>
                     <div className='wrapper h-full'>
-                      <div className='h-[300px]'>
+                      <div className='h-[300px] max-sm:h-[200px]'>
                         <CoverImage
                           title={title}
                           responsiveImage={coverImage.responsiveImage}
@@ -80,11 +80,13 @@ export default function HomeHero({
                       </div>
 
                       <div className='card-text p-6 flex flex-col justify-between h-auto'>
-                        <div className='font-bold font-Nantes text-xl mb-4 flex-col'>
+                        <div className='text-xl mb-4 flex-col'>
                           <div className='mb-2 text-lg'>
                             <Date dateString={date} />
                           </div>
-                          <div className='text-2xl mb-2'>{title}</div>
+                          <div className='text-2xl mb-2 font-Nantes'>
+                            {title}
+                          </div>
                           <div className='text-lg font-Lota font-light max-sm:text-sm'>
                             {excerpt}...
                           </div>
@@ -111,7 +113,7 @@ export default function HomeHero({
                 <div className=''>
                   <div className='card-text p-6'>
                     <Link href={`/posts/${slug}`}>
-                      <div className='font-bold font-Nantes text-xl mb-5 '>
+                      <div className='font-bold font-Nantes text-xl mb-8'>
                         {title}
                         <br />
                         <span className='text-sm font-Lota font-light max-sm:text-sm'>
@@ -120,7 +122,7 @@ export default function HomeHero({
                       </div>
                     </Link>
                     <Link href={`/posts/${slug}`}>
-                      <div className='font-bold font-Nantes text-xl mb-5'>
+                      <div className='font-bold font-Nantes text-xl mb-8'>
                         {title}
                         <br />
                         <span className='text-sm font-Lota font-light max-sm:text-sm'>
@@ -129,7 +131,7 @@ export default function HomeHero({
                       </div>
                     </Link>
                     <Link href={`/posts/${slug}`}>
-                      <div className='font-bold font-Nantes text-xl mb-5'>
+                      <div className='font-bold font-Nantes text-xl mb-8'>
                         {title}
                         <br />
                         <span className='text-sm font-Lota font-light max-sm:text-sm'>

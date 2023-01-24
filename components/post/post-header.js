@@ -5,16 +5,35 @@ import PostTitle from "./post-title";
 import Bread from "./breadcrumb";
 import AuthorByline from "../modals/author-byline";
 import ReviewerByline from "../modals/reviewer-byline";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { BsChevronLeft } from "react-icons/bs";
 
 export default function PostHeader({
   title,
   coverImage,
   date,
   author,
+  category,
   excerpt,
   reviewer,
 }) {
+  // this toggles state when clicking outside the modals
+  let modalRef = useRef();
+  let handler = (event) => {
+    if (!modalRef.current.contains(event.target)) {
+      setAuthorIsOpen(false);
+      setReviewerIsOpen(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
+  //modal state
   const [AuthorIsOpen, setAuthorIsOpen] = useState(false);
   const [ReviewerIsOpen, setReviewerIsOpen] = useState(false);
   const credit = coverImage.responsiveImage.title;
@@ -33,17 +52,24 @@ export default function PostHeader({
     <>
       <div
         id='container'
-        className='flex justify-between pt-12 max-sm:flex-wrap max-sm:pt-2'
+        className='flex justify-between pt-12 max-sm:flex-wrap max-sm:pt-6'
       >
         <div
           id='left'
-          className='flex-col w-[50%] pr-6  max-sm:w-[100%] max-sm:p-0'
+          className='flex-col w-[50%] pr-8  max-sm:w-[100%] max-sm:p-0'
         >
-          <div className='mb-6 text-lg flex justify-between items-center'>
-            <Bread />
-            <div className='published'>
-              <span className='text-sm bold'>Published:</span>{" "}
-              <Date dateString={date} className='text-sm' />
+          <div className='mb-12 text-lg flex justify-between items-center'>
+            <Link
+              href={`/category/${category.slug}`}
+              aria-label={category.name}
+            >
+              <span className='flex items-center text-[#445dc3]'>
+                <BsChevronLeft className='mr-3' /> {category.name}
+              </span>
+            </Link>
+            {/* <Bread /> */}
+            <div className='published text-gray-400'>
+              <Date dateString={date} />
             </div>
           </div>
           <PostTitle>{title}</PostTitle>
@@ -66,39 +92,43 @@ export default function PostHeader({
               <Avatar name={reviewer.name} picture={reviewer.picture} />
             </div>
           </div>
-          <div id='author-modal' className='relative'>
-            {AuthorIsOpen && (
-              <AuthorByline
-                name={author.name}
-                picture={author.picture}
-                bio={author.bio}
-                twitter={author.twitter}
-                linkedin={author.linkedin}
-                personal={author.personal}
-              />
-            )}
-          </div>
-          <div id='reviewer-modal' className='relative'>
-            {ReviewerIsOpen && (
-              <ReviewerByline
-                name={reviewer.name}
-                picture={reviewer.picture}
-                bio={reviewer.bio}
-                twitter={reviewer.twitter}
-                linkedin={reviewer.linkedin}
-                personal={reviewer.personal}
-              />
-            )}
+          <div ref={modalRef}>
+            <div id='author-modal' className='relative'>
+              {AuthorIsOpen && (
+                <AuthorByline
+                  name={author.name}
+                  picture={author.picture}
+                  bio={author.bio}
+                  twitter={author.twitter}
+                  linkedin={author.linkedin}
+                  personal={author.personal}
+                />
+              )}
+            </div>
+            <div id='reviewer-modal' className='relative'>
+              {ReviewerIsOpen && (
+                <ReviewerByline
+                  name={reviewer.name}
+                  picture={reviewer.picture}
+                  bio={reviewer.bio}
+                  twitter={reviewer.twitter}
+                  linkedin={reviewer.linkedin}
+                  personal={reviewer.personal}
+                />
+              )}
+            </div>
           </div>
         </div>
         <div
           id='right'
-          className='flex flex-col w-[50%] pl-6 max-sm:w-[100%] max-sm:p-0 max-sm:mt-12'
+          className='flex flex-col w-[50%] pl-8 max-sm:w-[100%] max-sm:p-0 max-sm:mt-12'
         >
-          <CoverImage
-            title={title}
-            responsiveImage={coverImage.responsiveImage}
-          />
+          <div className='h-[250px]'>
+            <CoverImage
+              title={title}
+              responsiveImage={coverImage.responsiveImage}
+            />
+          </div>
           <div className='credit text-xs text-grey-200 text-right mt-2'>
             Credit: {credit}
           </div>

@@ -35,6 +35,7 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
                 reviewer={post.reviewer}
                 excerpt={post.excerpt}
+                category={post.category}
               />
               <PostBody content={post.content} />
             </article>
