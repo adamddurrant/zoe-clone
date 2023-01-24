@@ -67,19 +67,19 @@ export default function HomeHero({
                 </li>
               </ul>
             </div>
-            <div className='second-slot border '>
+            <div className='second-slot border'>
               <ul>
                 <li>
                   <Link href={`/posts/${slug}`}>
                     <div className='wrapper h-full'>
-                      <div className='h-full'>
+                      <div className='h-[300px]'>
                         <CoverImage
                           title={title}
                           responsiveImage={coverImage.responsiveImage}
-                        />
+                        />{" "}
                       </div>
 
-                      <div className='card-text p-6 flex flex-col justify-between h-full'>
+                      <div className='card-text p-6 flex flex-col justify-between h-auto'>
                         <div className='font-bold font-Nantes text-xl mb-4 flex-col'>
                           <div className='mb-2 text-lg'>
                             <Date dateString={date} />
@@ -89,7 +89,7 @@ export default function HomeHero({
                             {excerpt}...
                           </div>
                         </div>
-                        <div className='no-underline flex mt-3 '>
+                        <div className='no-underline flex mt-3'>
                           <HomeAvatar
                             name={author.name}
                             picture={author.picture}

@@ -7,10 +7,12 @@
     list-style: revert;
     padding-inline-start: 40px;
   }
+
   #article-body ol {
     list-style: revert;
     padding-inline-start: 40px;
   }
+
   blockquote {
     background: #f9f9f9;
     border-left: 10px solid #ccc;
@@ -18,6 +20,7 @@
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
   }
+
   blockquote:before {
     color: #ccc;
     content: open-quote;
@@ -26,6 +29,7 @@
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
+
   blockquote p {
     display: inline;
   }
@@ -34,16 +38,18 @@
     color: #445dc3;
   }
 
-  .post-pic img {
-    object-fit: cover;
-  }
   nav {
     grid-template-columns: 1fr 3fr auto 3fr 1fr;
   }
+
   nav ul {
     display: flex;
     align-items: center;
   }
+}
+
+.post-pic img {
+  object-fit: cover;
 }
 
 #email-signup-box {
@@ -54,6 +60,14 @@
   grid-gap: 1.5rem;
   display: grid;
   justify-content: space-between;
+}
+
+ul-grid-large {
+  grid-gap: 1.5rem;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 .spotlight {
