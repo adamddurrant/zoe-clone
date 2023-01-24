@@ -1,6 +1,6 @@
 import React from "react";
-import CoverImage from "./cover-image";
-import Date from "./date";
+import CoverImage from "../post/cover-image";
+import Date from "../post/date";
 import HomeAvatar from "./home-avatar";
 import Link from "next/link";
 

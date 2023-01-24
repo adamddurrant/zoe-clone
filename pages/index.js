@@ -1,14 +1,14 @@
-import Container from "@/components/container";
-import Intro from "@/components/intro";
-import Layout from "@/components/layout";
+import Container from "@/components/structure/container";
+import Intro from "@/components/home/intro";
+import Layout from "@/components/structure/layout";
 import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
-import HomeHero from "@/components/home-hero";
-import TheTeam from "@/components/the-team";
-import LatestPodcasts from "@/components/latest-podcasts";
-import EditorsChoice from "@/components/editors-choice";
-import FourGrid from "@/components/home-four-grid";
-import EmailSignup from "@/components/email-signup";
+import HomeHero from "@/components/home/home-hero";
+import TheTeam from "@/components/home/the-team";
+import LatestPodcasts from "@/components/home/latest-podcasts";
+import EditorsChoice from "@/components/home/editors-choice";
+import FourGrid from "@/components/home/home-four-grid";
+import EmailSignup from "@/components/home/email-signup";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];

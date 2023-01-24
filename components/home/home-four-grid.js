@@ -1,5 +1,5 @@
 import React from "react";
-import PostPreview from "./post-preview";
+import PostPreview from "../post/post-preview";
 
 export default function FourGrid({ posts }) {
   const TwoColPosts = posts.slice(0, 4);

@@ -1,7 +1,7 @@
 import Date from "./date";
 import CoverImage from "./cover-image";
 import Link from "next/link";
-import HomeAvatar from "./home-avatar";
+import HomeAvatar from "../home/home-avatar";
 
 export default function PostPreview({
   title,

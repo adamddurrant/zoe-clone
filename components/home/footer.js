@@ -1,4 +1,4 @@
-import Container from "./container";
+import Container from "../structure/container";
 import { useState } from "react";
 
 export default function Footer() {

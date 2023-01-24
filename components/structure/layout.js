@@ -1,5 +1,5 @@
-import Alert from "./alert";
-import Footer from "./footer";
+import Alert from "../home/alert";
+import Footer from "../home/footer";
 import Meta from "./meta";
 import Header from "./header";
 import Container from "./container";

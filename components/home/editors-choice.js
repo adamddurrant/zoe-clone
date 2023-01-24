@@ -1,6 +1,6 @@
 import React from "react";
 import HomeHeader from "./home-header";
-import PostPreview from "./post-preview";
+import PostPreview from "../post/post-preview";
 
 export default function EditorsChoice({ posts }) {
   return (

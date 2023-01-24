@@ -1,9 +1,9 @@
 import React from "react";
 import { getEditorialProcessContent } from "@/lib/api";
-import Layout from "@/components/layout";
+import Layout from "@/components/structure/layout";
 import markdownToHtml from "@/lib/markdownToHtml";
-import Container from "@/components/container";
-import PostBody from "@/components/post-body";
+import Container from "@/components/structure/container";
+import PostBody from "@/components/post/post-body";
 
 export default function EditorialProcess({ process }) {
   return (

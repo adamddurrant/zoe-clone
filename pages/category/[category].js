@@ -1,25 +1,20 @@
 import { useRouter } from "next/router";
-import Container from "@/components/container";
-import MoreStories from "@/components/more-stories";
-import Layout from "@/components/layout";
-import PostPreview from "@/components/post-preview";
+import Container from "@/components/structure/container";
+import Layout from "@/components/structure/layout";
+import PostPreview from "@/components/post/post-preview";
 import {
   getAllCategories,
   getCategoryBySlug,
   getPostAndMorePosts,
 } from "@/lib/api";
-import PostTitle from "@/components/post-title";
+import PostTitle from "@/components/post/post-title";
 import Head from "next/head";
 
 export default function Post({ category, morePosts, preview, allCategories }) {
   const router = useRouter();
-  const currentPath = router.asPath;
-  const content = morePosts.morePosts;
-  const filteredContent = content.filter(
+  const filteredContent = morePosts.filter(
     (post) => post.category.slug === category.slug
   );
-
-  console.log(filteredContent);
 
   return (
     <Layout preview={preview}>
@@ -67,16 +62,16 @@ export default function Post({ category, morePosts, preview, allCategories }) {
   );
 }
 
-// fetch category page data from /lib/api
 export async function getStaticProps({ preview = false, params }) {
   const categories = await getCategoryBySlug(params?.category, preview);
   const allCategories = await getAllCategories();
   const getMorePosts = await getPostAndMorePosts();
+
   return {
     props: {
       category: categories,
       allCategories: allCategories,
-      morePosts: getMorePosts,
+      morePosts: getMorePosts?.morePosts ?? [],
     },
   };
 }

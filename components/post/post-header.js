@@ -3,8 +3,8 @@ import Date from "./date";
 import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import Bread from "./breadcrumb";
-import AuthorByline from "./modals/author-byline";
-import ReviewerByline from "./modals/reviewer-byline";
+import AuthorByline from "../modals/author-byline";
+import ReviewerByline from "../modals/reviewer-byline";
 import { useState } from "react";
 
 export default function PostHeader({

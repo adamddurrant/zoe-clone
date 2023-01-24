@@ -1,5 +1,5 @@
 import React from "react";
-import CtaButton from "./cta-button";
+import CtaButton from "../structure/cta-button";
 import HomeHeader from "./home-header";
 
 export default function TheTeam() {

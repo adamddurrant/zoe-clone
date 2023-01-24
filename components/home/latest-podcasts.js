@@ -1,5 +1,5 @@
 import React from "react";
-import PostPreview from "./post-preview";
+import PostPreview from "../post/post-preview";
 import HomeHeader from "./home-header";
 
 export default function LatestPodcasts({ posts }) {

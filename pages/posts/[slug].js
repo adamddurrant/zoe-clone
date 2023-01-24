@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "@/components/container";
-import PostBody from "@/components/post-body";
-import MoreStories from "@/components/more-stories";
-import PostHeader from "@/components/post-header";
-import SectionSeparator from "@/components/section-separator";
-import Layout from "@/components/layout";
+import Container from "@/components/structure/container";
+import PostBody from "@/components/post/post-body";
+import MoreStories from "@/components/post/more-stories";
+import PostHeader from "@/components/post/post-header";
+import SectionSeparator from "@/components/structure/section-separator";
+import Layout from "@/components/structure/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "@/lib/api";
-import PostTitle from "@/components/post-title";
+import PostTitle from "@/components/post/post-title";
 import Head from "next/head";
 import markdownToHtml from "@/lib/markdownToHtml";
 
