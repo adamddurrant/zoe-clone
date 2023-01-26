@@ -5,6 +5,7 @@ import {
   AiFillLinkedin,
   AiOutlineLink,
 } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
 
 export default function ReviewerByline({
@@ -14,6 +15,7 @@ export default function ReviewerByline({
   bio,
   picture,
   name,
+  slug,
 }) {
   return (
     <>
@@ -23,7 +25,7 @@ export default function ReviewerByline({
           <div className={styles.modalContent}>
             <div className='flex'>
               <div className='flex-col'>
-                <div className='w-12 h-12 relative mr-4'>
+                <div className='w-16 h-16 relative mr-4'>
                   <img
                     src={picture.url}
                     layout='fill'
@@ -33,8 +35,17 @@ export default function ReviewerByline({
                 </div>
               </div>
               <div className='flex-col mb-4'>
-                <div className='text-lg font-medium block no-underline'>
-                  {name}
+                <div className='text-xl font-medium no-underline pb-2 block'>
+                  <Link href={`/team/${slug}`} className='flex'>
+                    {name}{" "}
+                    <BiLinkExternal
+                      style={{
+                        height: "10px",
+                        width: "10px",
+                        marginLeft: "3px",
+                      }}
+                    />
+                  </Link>
                 </div>
                 <div className='socials flex items-center'>
                   <Link href={twitter} className='pr-2'>

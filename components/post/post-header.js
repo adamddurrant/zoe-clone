@@ -102,6 +102,7 @@ export default function PostHeader({
                   twitter={author.twitter}
                   linkedin={author.linkedin}
                   personal={author.personal}
+                  slug={author.slug}
                 />
               )}
             </div>
@@ -114,6 +115,7 @@ export default function PostHeader({
                   twitter={reviewer.twitter}
                   linkedin={reviewer.linkedin}
                   personal={reviewer.personal}
+                  slug={reviewer.slug}
                 />
               )}
             </div>
